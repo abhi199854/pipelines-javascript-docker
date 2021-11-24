@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: abhipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: abhipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: abhipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: abhipipelinesjavascriptdocker 
+          image: sampleaksacr.azurecr.io/abhipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
